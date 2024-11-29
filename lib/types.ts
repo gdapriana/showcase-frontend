@@ -3,34 +3,34 @@ export interface Profile {
 }
 
 export interface ProfileClass {
-  name:      string;
-  fullName:  string;
+  name: string;
+  fullName: string;
   firstName: string;
-  lastName:  string;
+  lastName: string;
   highlight: string;
-  about:     string;
-  phone:     string;
-  email:     string;
-  born:      Date;
-  age:       number;
-  profile:   string;
-  images:    string[];
-  socials:   Social[];
-  cv:        string;
-  studies:   Study[];
+  about: string;
+  phone: string;
+  email: string;
+  born: Date;
+  age: number;
+  profile: string;
+  images: string[];
+  socials: Social[];
+  cv: string;
+  studies: Study[];
 }
 
 export interface Social {
-  name:     string;
+  name: string;
   username: string;
-  url:      string;
+  url: string;
 }
 
 export interface Study {
-  name:   string;
-  logo:   string;
-  from:   Date;
-  until:  Date;
+  name: string;
+  logo: string;
+  from: Date;
+  until: Date;
   target: string;
   status: string;
 }
@@ -40,8 +40,8 @@ export interface Services {
 }
 
 export interface Service {
-  name:        string;
-  slug:        string;
+  name: string;
+  slug: string;
   description: string;
 }
 
@@ -50,12 +50,12 @@ export interface Works {
 }
 
 export interface Work {
-  name:         string;
-  tech:         string[];
+  name: string;
+  tech: string[];
   repositories: string[];
-  mode:         string;
-  website:      string;
-  description:  string;
+  mode: string;
+  website: string;
+  description: string;
 }
 
 export interface Blogs {
@@ -63,11 +63,32 @@ export interface Blogs {
 }
 
 export interface Blog {
-  title:       string;
-  slug:        string;
+  title: string;
+  slug: string;
   description: string;
-  createdAt:   Date;
+  createdAt: Date;
   readingTime: number;
-  body:        string;
+  body: string;
 }
 
+export interface Experiences {
+  experiences: Experience[];
+}
+
+export interface Experience {
+  name: string;
+  company: Company;
+  description: string;
+  from: Date;
+  until: Date;
+  type: string;
+  media?: string[];
+}
+
+export interface Company {
+  slug: string;
+  name: string;
+  logo: string;
+  highlight: string;
+  location: string;
+}

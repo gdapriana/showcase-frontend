@@ -1,17 +1,17 @@
-import {BookImage, BriefcaseBusiness, HandPlatter, Home, SquareUserRound, Wand} from "lucide-react"
-
+import { BookImage, BriefcaseBusiness, HandPlatter, Home, SquareUserRound, Wand } from "lucide-react";
 
 import {
   Sidebar,
-  SidebarContent, SidebarFooter,
+  SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
-import {ProfileClass} from "@/lib/types";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+} from "@/components/ui/sidebar";
+import { ProfileClass } from "@/lib/types";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const items = [
   {
@@ -43,15 +43,13 @@ const items = [
     title: "Contact",
     url: "/contact",
     icon: SquareUserRound,
-  }
-]
+  },
+];
 
 export async function AppSidebar() {
-
   const profile: ProfileClass = await fetch(`${process.env.NEXT_PUBLIC_SERVER}/profile`)
-    .then(res => res.json())
-    .then(data => data.profile)
-
+    .then((res) => res.json())
+    .then((data) => data.profile);
 
   return (
     <Sidebar>
@@ -78,7 +76,7 @@ export async function AppSidebar() {
           <div className="flex justify-center items-center gap-4">
             <Avatar>
               <AvatarFallback>{profile.name.charAt(0)}</AvatarFallback>
-              <AvatarImage src={profile.profile}/>
+              <AvatarImage src={profile.profile} />
             </Avatar>
             <h4 className="scroll-m-20 text-base font-semibold tracking-tight">{profile.name}</h4>
           </div>
@@ -86,5 +84,5 @@ export async function AppSidebar() {
         <i data-lucide="menu"></i>
       </SidebarFooter>
     </Sidebar>
-  )
+  );
 }
