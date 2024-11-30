@@ -1,12 +1,8 @@
-import {Company} from "@/lib/types";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
-import {Button} from "@/components/ui/button";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Badge} from "@/components/ui/badge";
+import { Company } from "@/lib/types";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 
 export const CompanyPopover = ({ company }: { company: Company }) => {
   return (
@@ -23,7 +19,7 @@ export const CompanyPopover = ({ company }: { company: Company }) => {
             <AvatarFallback>{company.name.charAt(0)}</AvatarFallback>
             <AvatarImage src={company.logo || ""} />
           </Avatar>
-          <h3 className='font-bold'>{company.name}</h3>
+          <h3 className="font-bold">{company.name}</h3>
         </div>
         <div className="">
           <p className="text-sm text-muted-foreground">{company.highlight}</p>
@@ -33,5 +29,5 @@ export const CompanyPopover = ({ company }: { company: Company }) => {
         </div>
       </PopoverContent>
     </Popover>
-  )
-}
+  );
+};

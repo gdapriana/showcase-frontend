@@ -5,11 +5,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import moment from "moment/moment";
 import { motion as m } from "framer-motion";
-import {CompanyPopover} from "@/app/(root)/about/_components/company-popover";
+import { CompanyPopover } from "@/app/(root)/about/_components/company-popover";
 
 export const Experiences = ({ experiences }: { experiences: Experience[] }) => {
   return (
-    <main className="flex flex-col justify-start items-stretch">
+    <main className="flex flex-col justify-start items-stretch gap-8">
       <Header headline="Everything About Me !" title="- EXERIENCES" />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {experiences.map((experience: Experience, index: number) => {
