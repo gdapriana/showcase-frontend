@@ -11,10 +11,9 @@ export default async function Home() {
 
   return (
     <main className="max-w-4xl h-screen justify-center items-center flex w-full">
-      <div className="grid gap-20 grid-cols-1 grid-rows-[auto_auto] lg:grid-rows-[auto_auto] lg:grid-cols-[1fr_auto] w-full">
+      <div className="w-full flex justify-center items-center gap-20">
         <Header profile={profile} />
         <Images profile={profile} />
-        <Footer profile={profile} />
       </div>
     </main>
   );

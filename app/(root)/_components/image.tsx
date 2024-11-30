@@ -6,7 +6,7 @@ import { motion as m } from "framer-motion";
 
 export const Images = ({ profile }: { profile: ProfileClass }) => {
   return (
-    <main className="hidden relative lg:flex lg:row-span-2">
+    <main className="hidden relative lg:flex">
       <m.div
         animate={{ width: ["100%", 0] }}
         transition={{ duration: 2, delay: 4.4, ease: "anticipate" }}
