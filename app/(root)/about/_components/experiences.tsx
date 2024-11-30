@@ -5,6 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import moment from "moment/moment";
 import { motion as m } from "framer-motion";
+import {CompanyPopover} from "@/app/(root)/about/_components/company-popover";
 
 export const Experiences = ({ experiences }: { experiences: Experience[] }) => {
   return (
@@ -20,10 +21,7 @@ export const Experiences = ({ experiences }: { experiences: Experience[] }) => {
               className="border gap-y-1 gap-x-3 grid grid-cols-[auto_1fr] grid-rows-[auto_auto_auto] rounded-xl p-6"
             >
               <div className="flex justify-center items-center">
-                <Avatar>
-                  <AvatarFallback>{experience.company.name.charAt(0)}</AvatarFallback>
-                  <AvatarImage src={experience.company.logo || ""} />
-                </Avatar>
+                <CompanyPopover company={experience.company} />
               </div>
               <div className="flex justify-start items-center">
                 <h1 className="font-bold leading-5 text-lg">{experience.name}</h1>

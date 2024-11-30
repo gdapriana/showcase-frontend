@@ -14,7 +14,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
         <div className="absolute right-0 top-0 m-4">
           <ModeToggle />
         </div>
-        <div className="grow basis-0 overflow-auto flex flex-col justify-start items-center w-full h-full px-20 py-28">
+        <div className="grow basis-0 overflow-auto flex flex-col justify-start items-center w-full h-full px-4 py-28">
           {children}
         </div>
       </main>
