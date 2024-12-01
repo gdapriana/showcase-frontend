@@ -26,7 +26,7 @@ export const AboutHeader = ({ profile }: { profile: ProfileClass }) => {
         className="flex flex-col justify-start gap-4 items-stretch"
       >
         <p className="text-muted-foreground leading-7">{profile.about}</p>
-        <div className="flex justify-start items-center overflow-auto gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
           <div className="flex flex-col justify-center items-start">
             <h1 className="underline text-muted-foreground whitespace-nowrap">AGE</h1>
             <h1 className="font-bold whitespace-nowrap">{profile.age}</h1>
