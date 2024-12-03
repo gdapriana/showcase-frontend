@@ -64,6 +64,7 @@ export interface Blogs {
 
 export interface Blog {
   title: string;
+  cover: string;
   slug: string;
   description: string;
   createdAt: Date;

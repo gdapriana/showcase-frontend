@@ -12,9 +12,9 @@ export default {
       typography: {
         DEFAULT: {
           css: {
-            maxWidth: '100%',
-          }
-        }
+            maxWidth: "100%",
+          },
+        },
       },
       colors: {
         background: "hsl(var(--background))",
@@ -75,5 +75,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography')],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
